@@ -31,6 +31,22 @@ While in development mode (`yarn dev`) the script will rebuild on any changes to
 
 `yarn build` will compile and minify your build of the script. You can then host and link your built script wherever you like.
 
+## Installing Yarn on Windows
+
+To install Yarn on Windows, follow these steps:
+
+1. **Install Node.js**: Yarn requires Node.js. Download and install it from the [official Node.js website](https://nodejs.org/).
+
+2. **Install Yarn**: Once Node.js is installed, you can install Yarn using the following command in your command prompt or PowerShell:
+    ```sh
+    npm install --global yarn
+    ```
+
+3. **Verify Installation**: After installation, verify that Yarn is installed correctly by running:
+    ```sh
+    yarn --version
+    ```
+
 ## Integrations & Embed Types
 
 ### `<script>` tag HTML embed

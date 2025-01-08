@@ -38,7 +38,7 @@
   script.setAttribute("data-window-height", "1000px");
   script.setAttribute("data-window-width", "600px");
 //  script.setAttribute("data-brand-image-url", "https://partner.novamsg.org/cms/assets/download/9178/division-kb.png");
-  script.setAttribute("data-brand-image-url", "https://partner.novamsg.org/cms/assets/download/9178/division-kb.png");
+  script.setAttribute("data-brand-image-url", "https://partner.novamsg.org/cms/assets/download/9177/exaone.png");
   script.setAttribute("data-assistant-icon", "https://partner.novamsg.org/cms/assets/download/9177/exaone.png");
   script.setAttribute("data-base-api-url", "http://localhost:3001/api/embed");
   script.setAttribute("data-assistant-name", "Áö½Ä°ü¸® Ãªº¿ (All in AI)");
