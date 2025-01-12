@@ -131,6 +131,7 @@ function OptionsMenu({ settings, showing, resetChat, sessionId, menuRef }) {
       </button>
       <ContactSupport email={settings.supportEmail} />
       <SessionID sessionId={sessionId} />
+      <p>LLM Model</p>
     </div>
   );
 }
