@@ -13,7 +13,7 @@ export default function ResetChat({ setChatHistory, settings, sessionId }) {
         className="hover:allm-cursor-pointer allm-border-none allm-text-sm allm-bg-transparent hover:allm-opacity-80 hover:allm-underline"
         onClick={() => handleChatReset()}
       >
-        Reset Chat
+        위키 요약
       </button>
     </div>
   );

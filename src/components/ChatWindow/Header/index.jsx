@@ -66,14 +66,14 @@ export default function ChatWindowHeader({
     >
       <div className="allm-flex allm-justify-center allm-items-center allm-w-full allm-h-[76px]">
         <img
-          style={{ maxWidth: 48, maxHeight: 48 }}
+          style={{ /*maxWidth: 48, maxHeight: 48*/ }}
           src={iconUrl ?? AnythingLLMIcon}
           alt={iconUrl ? "Brand" : "AnythingLLM Logo"}
         />
       </div>
       <div className="allm-absolute allm-right-0 allm-flex allm-gap-x-1 allm-items-center allm-px-[22px]">
         {settings.loaded && (
-          <button
+          <button hidden  
             ref={buttonRef}
             type="button"
             onClick={() => setShowOptions(!showingOptions)}

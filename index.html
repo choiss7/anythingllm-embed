@@ -4,70 +4,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <html lang="en">
-
   <body>
     <h1>This is an example testing page for embedded AnythingLLM.</h1>
-    <!--
-      <script data-embed-id="example-uuid" data-base-api-url='http://localhost:3001/api/embed' data-open-on-load="on"
-      src="/dist/anythingllm-chat-widget.js"> USE THIS SRC FOR DEVELOPMENT SO CHANGES APPEAR!
-      </script>
-    -->
+
+    <div class="wiki wiki-page">
+      <a name="ì—…ë¬´-ê°œë°œì‚¬-í† íŠ¸ì†Œí”„íŠ¸"></a>
+      <h1>ì—…ë¬´ ê°œë°œì‚¬ í† íŠ¸ì†Œí”„íŠ¸<a href="#ì—…ë¬´-ê°œë°œì‚¬-í† íŠ¸ì†Œí”„íŠ¸" class="wiki-anchor">&para;</a></h1>
+
+      <p>íšŒì‚¬ ê·œëª¨ : ê°œë°œì 30ëª…   (ì •ê·œì§ 10ëª… ,  ìš´ì˜ì†Œì‹± ì¸ë ¥ 20ëª…)<br>
+      <br>
+      íšŒì‚¬ ì´ë ¥  :  ì§€ì–´ì†Œí”„íŠ¸ íŒ€ì¥ -&gt; í† íŠ¸ì†Œí”„íŠ¸ ëŒ€í‘œ  , ì—…ë ¥ 5ë…„</p>
+
+      <p>ë‹´ë‹¹ì :  ì „í™ê¸° ëŒ€í‘œ</p>
+
+      <p>ì‚¬ë¬´ì‹¤ : ë§ˆê³¡ ì¤‘ì•™ë¡œ ë‘ì‚° ë” ëœë“œ íŒŒí¬ </p>
+
+      <p>í™ˆí˜ì´ì§€ :  <a class="external" href="http://www.totsoft.co.kr">http://www.totsoft.co.kr</a><br>
+       </p>
+
+      <p>ì—…ì²´ë¯¸íŒ… : 2024.03.19  (ìµœì„±ìˆœ)  </p>
+
+      <ul>
+        <li>RBC ê°œì¸ì •ë³´ë³´í˜¸ ì‹œìŠ¤í…œ  êµ¬ì¶• ê´€ë ¨í•˜ì—¬ ê¸°íšê´€ë¦¬íŒ€ ê¹€ì›…ê·œë‹˜ ì†Œê°œë¡œ  ë¯¸íŒ… ì§„í–‰ í•¨</li>
+        <li>ê¸°ìˆ ê°œë°œë‹´ë‹¹  ì „ëµ ì—…ì²´  , ì„œë¹„ìŠ¤ê°œë°œíŒ€ í•¨ì›ì‹ë‹˜  ì›¹í•˜ë“œ ìš´ì˜ ê³„ì•½  ( ëˆ„ë¦¬ê¿ˆ 4ëª… ìƒì£¼ )</li>
+        <li>SM 60%  , SI 40%  ì¸ë ¥ ê·œëª¨ </li>
+        <li>RBC í”„ë¡œì íŠ¸ëŠ” ìœ ì‚¬ í”„ë¡œì íŠ¸ë¥¼ ìˆ˜í–‰í•œ í† íŠ¸ PM ì´  6ì›”ê¹Œì§€ íˆ¬ì…ë˜ì–´ ìˆì–´  ì°¸ì—¬ ë¶ˆê°€</li>
+      </ul>
+
+    </div>
+
+    <script>
+      // Extract content from <div class="wiki wiki-page">
+      const wikiElement = document.querySelector('.wiki.wiki-page');
+      let defaultMessages;
+    
+      if (wikiElement) {
+        // Combine all the inner text into one string
+        defaultMessages = wikiElement.innerText.trim().replace(/\n/g, ' ').replace(/,/g, '');
+      } else {
+        // If the element doesn't exist, use a default fallback question
+        const randomQuestions = [
+          "Flexboxì™€ Gridì˜ ì°¨ì´ì ì€ ë¬´ì—‡ì¸ê°€ìš”? ê°ê° ì–¸ì œ ì‚¬ìš©í•˜ëŠ” ê²ƒì´ ì í•©í•œê°€ìš”?" ,
+          "var  let  constì˜ ì°¨ì´ì ì€ ë¬´ì—‡ì¸ê°€ìš”?" ,
+          "ë¸Œë¼ìš°ì €ê°€ URLì— ì ‘ì†í–ˆì„ ë•Œ ì–´ë–¤ ì¼ì´ ë°œìƒí•˜ë‚˜ìš”?" ,
+          "RESTful APIë€ ë¬´ì—‡ì´ë©°  HTTP ë©”ì„œë“œ(GET  POST  PUT  DELETE)ì˜ ì—­í• ì€ ë¬´ì—‡ì¸ê°€ìš”?" ,
+          "ë¸Œë¼ìš°ì €ì˜ CORS ì •ì±…ì„ ì„¤ëª…í•˜ê³  ì´ë¥¼ ìš°íšŒí•˜ëŠ” ë°©ë²•ì€ ë¬´ì—‡ì¸ê°€ìš”?" ,
+          "í”„ë¡ íŠ¸ì—”ë“œì™€ ë°±ì—”ë“œ ê°„ ë°ì´í„°ë¥¼ ì£¼ê³ ë°›ì„ ë•Œ ì–´ë–¤ ë°ì´í„° í˜•ì‹ì„ ì£¼ë¡œ ì‚¬ìš©í•˜ë©°  ê·¸ ì´ìœ ëŠ” ë¬´ì—‡ì¸ê°€ìš”?" ,
+          "JavaScriptì—ì„œ ë¹„ë™ê¸° ì²˜ë¦¬ë¥¼ ì–´ë–»ê²Œ êµ¬í˜„í•˜ë‚˜ìš”? (ì˜ˆ: Callback  Promise  async/await)"
+        ];
+        const randomIndex = Math.floor(Math.random() * randomQuestions.length);
+        defaultMessages = randomQuestions[randomIndex];
+      }
+    
+      // Inject the script with the dynamic data-default-messages value
+      const script = document.createElement('script');
+      script.src = "http://localhost:3000/embed/anythingllm-chat-widget.min.js";
+      script.dataset.embedId = "70fee84e-a8fb-46b5-a38e-a0b5d31bf9d1";
+      script.dataset.baseApiUrl = "http://localhost:3001/api/embed";
+      script.dataset.greeting = "Hello! How can I help you today?";
+      script.dataset.defaultMessages = defaultMessages;
+      script.dataset.openOnLoad = "on";
+    
+      document.body.appendChild(script);
+    </script>
+    
+
   </body>
-
-
-<!--
-Paste this script at the bottom of your HTML before the </body> tag.
-See more style and config options on our docs
-https://github.com/Mintplex-Labs/anything-llm/tree/master/embed/README.md
--->
-<script
-  data-embed-id="a2a0eb30-12a7-457c-9e48-94a0895db31b"
-  data-base-api-url="http://localhost:3001/api/embed"
-  data-support-email ="choipro@gmail.com"
-  src="http://localhost:3000/embed/anythingllm-chat-widget.min.js">
-</script>
-<!-- AnythingLLM (https://anythingllm.com) -->
-
-
-  <!--
-  <script>
-  // ·£´ı ¸Ş½ÃÁö ¹è¿­
-  const defaultMessages = [
-    "React¿Í VueÀÇ Â÷ÀÌÁ¡Àº ¹«¾ùÀÎ°¡¿ä?",
-    "JavaScript¿¡¼­ ºñµ¿±â ÇÁ·Î±×·¡¹ÖÀ» ¾î¶»°Ô ±¸ÇöÇÏ³ª¿ä?",
-    "TypeScriptÀÇ ÁÖ¿ä Æ¯Â¡°ú ÀåÁ¡Àº ¹«¾ùÀÎ°¡¿ä?",
-    "À¥ Á¢±Ù¼ºÀ» Çâ»ó½ÃÅ°´Â ¹æ¹ı¿¡´Â ¾î¶² °ÍµéÀÌ ÀÖ³ª¿ä?",
-    "ÃÖ½Å CSS ±â¼úÀÎ Flexbox¿Í GridÀÇ ÁÖ¿ä ¿ëµµ´Â ¹«¾ùÀÎ°¡¿ä?"
-  ];
-
-  // ·£´ı ¸Ş½ÃÁö ¼±ÅÃ
-  const randomMessage = defaultMessages[Math.floor(Math.random() * defaultMessages.length)];
-
-  // ½ºÅ©¸³Æ® ÅÂ±× µ¿ÀûÀ¸·Î »ı¼º
-  const script = document.createElement("script");
-  script.setAttribute("data-embed-id", "dc588ca9-bf9b-406b-a511-73ea3485c175");
-  script.setAttribute("data-chat-icon", "chatBubble");
-  script.setAttribute("data-sponsor-text", "±â¾÷/¼Ö·ç¼Ç´ã´ç AX¼Ö·ç¼Ç±â¼úTF");
-  script.setAttribute("data-sponsor-link", "https://partner.novamsg.org/");
-  script.setAttribute("data-open-on-load", "³Ê´Â ¾î¶² ÀÏÀ» ÇÒ¼ö ÀÖ¾î?");
-  script.setAttribute("data-window-height", "1000px");
-  script.setAttribute("data-window-width", "600px");
-//  script.setAttribute("data-brand-image-url", "https://partner.novamsg.org/cms/assets/download/9178/division-kb.png");
-  script.setAttribute("data-brand-image-url", "https://partner.novamsg.org/cms/assets/download/9178/division-kb.png");
-  script.setAttribute("data-assistant-icon", "https://partner.novamsg.org/cms/assets/download/9177/exaone.png");
-  script.setAttribute("data-base-api-url", "http://localhost:3001/api/embed");
-  script.setAttribute("data-assistant-name", "Áö½Ä°ü¸® Ãªº¿ (All in AI)");
-  script.setAttribute("data-greeting", "¾È³çÇÏ¼¼¿ä. ¹Ìµğ¾î·Î±× ±â¾÷/¼Ö·ç¼Ç´ã´ç AX¼Ö·ç¼Ç±â¼ú TF LLM Ãªº¿ ÀÔ´Ï´Ù.");
-  script.setAttribute("data-default-messages", randomMessage);
- // script.src = "https://raw.githubusercontent.com/choiss7/anythingllm-embed/refs/heads/main/dist/anythingllm-chat-widget.js";
- script.src = "http://localhost:3000/embed/anythingllm-chat-widget.min.js";
-
-  // body¿¡ Ãß°¡
-  document.body.appendChild(script);
-</script>
--->
-
-
-
-
 </html>
