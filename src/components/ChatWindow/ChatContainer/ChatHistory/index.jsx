@@ -6,6 +6,16 @@ import { embedderSettings } from "@/main";
 import debounce from "lodash.debounce";
 import { SEND_TEXT_EVENT } from "..";
 
+/**
+ * ChatHistory 컴포넌트
+ * 채팅 메시지 목록을 표시하고 관리하는 컴포넌트입니다.
+ * 스크롤 위치 관리, 메시지 렌더링을 담당합니다.
+ * 
+ * @param {Object} props
+ * @param {Object} props.settings - 채팅 설정
+ * @param {Array} props.history - 채팅 메시지 기록
+ */
+
 export default function ChatHistory({ settings = {}, history = [] }) {
   const replyRef = useRef(null);
   const [isAtBottom, setIsAtBottom] = useState(true);
@@ -119,6 +129,10 @@ export default function ChatHistory({ settings = {}, history = [] }) {
   );
 }
 
+/**
+ * ChatHistoryLoading 컴포넌트
+ * 채팅 기록 로딩 중 표시되는 로딩 인디케이터입니다.
+ */
 export function ChatHistoryLoading() {
   return (
     <div className="allm-h-full allm-w-full allm-relative">
