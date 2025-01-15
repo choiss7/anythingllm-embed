@@ -10,8 +10,8 @@
     "styles": "npx cleancss -o dist/anythingllm-chat-widget.min.css dist/style.css",
     "build": "vite build && yarn styles && npx terser --compress -o dist/anythingllm-chat-widget.min.js -- dist/anythingllm-chat-widget.js",
     "build:publish": "yarn build:publish:js && yarn build:publish:css",
-    "build:publish:js": "yarn build ; copy  dist/anythingllm-chat-widget.min.js ../anything-llm/frontend/public/embed/anythingllm-chat-widget.min.js",
-    "build:publish:css": "copy  dist/anythingllm-chat-widget.min.css ../anything-llm/frontend/public/embed/anythingllm-chat-widget.min.css",
+    "build:publish:js": "yarn build && copy dist\\anythingllm-chat-widget.min.js ..\\anything-llm\\frontend\\public\\embed\\anythingllm-chat-widget.min.js",
+    "build:publish:css": "copy dist\\anythingllm-chat-widget.min.css ..\\anything-llm\\frontend\\public\\embed\\anythingllm-chat-widget.min.css",
     "lint": "yarn prettier --ignore-path ../.prettierignore --write ./src"
   },
   "dependencies": {

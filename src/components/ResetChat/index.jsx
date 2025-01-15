@@ -1,7 +1,16 @@
 import { SEND_TEXT_EVENT } from "@/components/ChatWindow/ChatContainer";
 import ChatService from "@/models/chatService";
+import { useEffect, useState } from "react";
 
 export default function ResetChat({ settings, setChatHistory, sessionId }) {
+  const [hasWikiContent, setHasWikiContent] = useState(false);
+
+  useEffect(() => {
+    // Check if wiki element exists
+    const wikiElement = document.querySelector('.wiki.wiki-page');
+    setHasWikiContent(!!wikiElement);
+  }, []);
+
   const handleWikiSummary = () => {
     if (settings.defaultMessages) {
       const messages = typeof settings.defaultMessages === 'string' 
@@ -25,13 +34,15 @@ export default function ResetChat({ settings, setChatHistory, sessionId }) {
 
   return (
     <div className="allm-w-full allm-flex allm-justify-center allm-gap-4">
-      <button
-        style={{ color: "#7A7D7E" }}
-        className="hover:allm-cursor-pointer allm-border-none allm-text-sm allm-bg-transparent hover:allm-opacity-80 hover:allm-underline"
-        onClick={handleWikiSummary}
-      >
-        위키 요약
-      </button>
+      {hasWikiContent && (
+        <button
+          style={{ color: "#7A7D7E" }}
+          className="hover:allm-cursor-pointer allm-border-none allm-text-sm allm-bg-transparent hover:allm-opacity-80 hover:allm-underline"
+          onClick={handleWikiSummary}
+        >
+          위키 요약
+        </button>
+      )}
       <button
         style={{ color: "#7A7D7E" }}
         className="hover:allm-cursor-pointer allm-border-none allm-text-sm allm-bg-transparent hover:allm-opacity-80 hover:allm-underline"
