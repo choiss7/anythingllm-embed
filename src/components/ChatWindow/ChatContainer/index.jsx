@@ -3,6 +3,19 @@ import ChatHistory from "./ChatHistory";
 import PromptInput from "./PromptInput";
 import handleChat from "@/utils/chat";
 import ChatService from "@/models/chatService";
+
+/**
+ * ChatContainer 컴포넌트
+ * 채팅 메시지 목록과 입력창을 포함하는 메인 컨테이너입니다.
+ * 메시지 전송, 응답 처리, 히스토리 관리를 담당합니다.
+ * 
+ * @param {Object} props
+ * @param {string} props.sessionId - 채팅 세션 ID
+ * @param {Object} props.settings - 채팅 설정
+ * @param {Array} props.knownHistory - 기존 채팅 기록
+ */
+
+// 채팅 프롬프트 전송 이벤트 상수
 export const SEND_TEXT_EVENT = "anythingllm-embed-send-prompt";
 
 export default function ChatContainer({

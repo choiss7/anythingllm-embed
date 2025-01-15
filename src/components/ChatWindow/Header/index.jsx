@@ -11,17 +11,16 @@ import {
 import { useEffect, useRef, useState } from "react";
 
 /**
- * ChatWindowHeader 컴포넌트는 채팅 창의 헤더 섹션을 렌더링합니다.
- * 채팅 로고, 옵션 메뉴, 닫기 버튼을 포함합니다.
- *
- * @param {Object} props - 컴포넌트 속성
- * @param {string} props.sessionId - 채팅 세션의 고유 식별자
- * @param {Object} [props.settings={}] - 채팅 설정 및 구성
- * @param {string|null} [props.iconUrl=null] - 사용자 정의 채팅 아이콘 URL
- * @param {Function} props.closeChat - 채팅 창을 닫는 함수
- * @param {Function} props.setChatHistory - 채팅 기록을 업데이트하는 함수
- *
- * @returns {JSX.Element} 렌더링된 ChatWindowHeader 컴포넌트
+ * ChatWindowHeader 컴포넌트
+ * 채팅창 상단의 헤더 영역을 담당하는 컴포넌트입니다.
+ * 로고, 옵션 메뉴, 닫기 버튼을 포함합니다.
+ * 
+ * @param {Object} props
+ * @param {string} props.sessionId - 채팅 세션 ID
+ * @param {Object} props.settings - 채팅 설정
+ * @param {string} props.iconUrl - 헤더에 표시될 아이콘 URL
+ * @param {Function} props.closeChat - 채팅창 닫기 함수
+ * @param {Function} props.setChatHistory - 채팅 기록 업데이트 함수
  */
 export default function ChatWindowHeader({
   sessionId,
@@ -105,17 +104,16 @@ export default function ChatWindowHeader({
 }
 
 /**
- * OptionsMenu 컴포넌트는 다양한 채팅 옵션이 포함된 드롭다운 메뉴를 표시합니다.
- * 채팅 초기화, 지원팀 연락, 세션 정보 보기 등의 옵션을 포함합니다.
- *
- * @param {Object} props - 컴포넌트 속성
- * @param {Object} props.settings - 채팅 설정 및 구성
- * @param {boolean} props.showing - 메뉴 표시 여부를 제어
- * @param {Function} props.resetChat - 채팅 세션을 초기화하는 함수
- * @param {string} props.sessionId - 채팅 세션의 고유 식별자
- * @param {Object} props.menuRef - 외부 클릭 처리를 위한 React ref
- *
- * @returns {JSX.Element|null} 렌더링된 OptionsMenu 컴포넌트 또는 표시되지 않을 경우 null
+ * OptionsMenu 컴포넌트
+ * 헤더의 옵션 메뉴를 표시하는 드롭다운 컴포넌트입니다.
+ * 채팅 초기화, 지원팀 연락처 등의 옵션을 포함합니다.
+ * 
+ * @param {Object} props
+ * @param {Object} props.settings - 채팅 설정
+ * @param {boolean} props.showing - 메뉴 표시 여부
+ * @param {Function} props.resetChat - 채팅 초기화 함수
+ * @param {string} props.sessionId - 세션 ID
+ * @param {Object} props.menuRef - 메뉴 요소에 대한 ref
  */
 function OptionsMenu({ settings, showing, resetChat, sessionId, menuRef }) {
   if (!showing) return null;
@@ -139,7 +137,7 @@ function OptionsMenu({ settings, showing, resetChat, sessionId, menuRef }) {
 }
 
 /**
- * SessionID 컴포넌트는 세션 ID를 표시하고 ��립보드 복사 기능을 관리합니다.
+ * SessionID 컴포넌트는 세션 ID를 표시하고 클립보드 복사 기능을 관리합니다.
  * ID가 클립보드에 복사되면 확인 메시지를 표시합니다.
  *
  * @param {Object} props - 컴포넌트 속성
@@ -180,7 +178,7 @@ function SessionID({ sessionId }) {
 }
 
 /**
- * ContactSupport 컴포넌트는 ��리 형식이 지정된 제목이 포함된 이메일 지원 링크를 렌더링합니다.
+ * ContactSupport 컴포넌트는 지원 형식이 지정된 제목이 포함된 이메일 지원 링크를 렌더링합니다.
  * 설정에 지원 이메일이 제공된 경우에만 표시됩니다.
  *
  * @param {Object} props - 컴포넌트 속성

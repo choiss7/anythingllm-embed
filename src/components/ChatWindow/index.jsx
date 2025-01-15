@@ -6,6 +6,17 @@ import Sponsor from "../Sponsor";
 import { ChatHistoryLoading } from "./ChatContainer/ChatHistory";
 import ResetChat from "../ResetChat";
 
+/**
+ * ChatWindow 컴포넌트
+ * 채팅 창의 메인 컨테이너 컴포넌트입니다.
+ * 헤더, 채팅 내역, 입력창 등 모든 채팅 관련 UI를 포함합니다.
+ * 
+ * @param {Object} props
+ * @param {Function} props.closeChat - 채팅창을 닫는 함수
+ * @param {Object} props.settings - 채팅 설정 객체
+ * @param {string} props.sessionId - 현재 채팅 세션 ID
+ */
+
 export default function ChatWindow({ closeChat, settings, sessionId }) {
   const { chatHistory, setChatHistory, loading } = useChatHistory(
     settings,
@@ -62,9 +73,12 @@ export default function ChatWindow({ closeChat, settings, sessionId }) {
   );
 }
 
-// Enables us to safely markdown and sanitize all responses without risk of injection
-// but still be able to attach a handler to copy code snippets on all elements
-// that are code snippets.
+/**
+ * 코드 스니펫 복사 기능
+ * 채팅 내 코드 블록을 클립보드에 복사하는 기능을 처리합니다.
+ * 
+ * @param {string} uuid - 복사할 코드 블록의 고유 식별자
+ */
 function copyCodeSnippet(uuid) {
   const target = document.querySelector(`[data-code="${uuid}"]`);
   if (!target) return false;
@@ -89,7 +103,10 @@ function copyCodeSnippet(uuid) {
   }, 2500);
 }
 
-// Listens and hunts for all data-code-snippet clicks.
+/**
+ * 코드 스니펫 이벤트 위임 설정
+ * 문서 전체에 이벤트 리스너를 추가하여 코드 복사 버튼 클릭을 감지합니다.
+ */
 function setEventDelegatorForCodeSnippets() {
   document?.addEventListener("click", function (e) {
     const target = e.target.closest("[data-code-snippet]");

@@ -1,3 +1,12 @@
+/**
+ * Sponsor 컴포넌트
+ * 스폰서 정보를 표시하는 컴포넌트입니다.
+ * 설정에 따라 스폰서 링크와 텍스트를 표시합니다.
+ * 
+ * @param {Object} props
+ * @param {Object} props.settings - 스폰서 관련 설정
+ * @returns {JSX.Element|null} 스폰서 정보 표시 요소 또는 null
+ */
 export default function Sponsor({ settings }) {
   if (!!settings.noSponsor) return null;
 

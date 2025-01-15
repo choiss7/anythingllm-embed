@@ -7,6 +7,18 @@ import {
   MagicWand,
 } from "@phosphor-icons/react";
 
+/**
+ * OpenButton 컴포넌트
+ * 채팅창을 열기 위한 플로팅 버튼 컴포넌트입니다.
+ * 다양한 아이콘 옵션을 지원합니다.
+ * 
+ * @param {Object} props
+ * @param {Object} props.settings - 버튼 설정
+ * @param {boolean} props.isOpen - 채팅창 열림 상태
+ * @param {Function} props.toggleOpen - 채팅창 토글 함수
+ */
+
+// 지원되는 채팅 아이콘 매핑
 const CHAT_ICONS = {
   plus: Plus,
   chatBubble: ChatCircleDots,
